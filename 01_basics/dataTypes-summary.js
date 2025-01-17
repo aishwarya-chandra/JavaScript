@@ -1,9 +1,11 @@
+// Javascript is dynamically typed language
+
 //  Primitive
 
 //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
-const score = 100
-const scoreValue = 100.3
+const score = 100           //number
+const scoreValue = 100.3    //number
 
 const isLoggedIn = false
 const outsideTemp = null
@@ -12,23 +14,23 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId);
+console.log(id === anotherId);     //value not same
 
 // const bigNumber = 3456543576654356754n
-
 
 
 // Reference (Non primitive)
 
 // Array, Objects, Functions
 
-const heros = ["shaktiman", "naagraj", "doga"];
+const heros = ["shaktiman", "naagraj", "doga"];  //array
+
 let myObj = {
-    name: "hitesh",
+    name: "hitesh",                             //object
     age: 22,
 }
 
-const myFunction = function(){
+const myFunction = function(){                 //function
     console.log("Hello world");
 }
 
