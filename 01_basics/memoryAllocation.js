@@ -1,5 +1,5 @@
 //Stack(Primitive data type) - saves a copy
-//Heap(Non-Primitive data type) - gives a reference
+//Heap(Non-Primitive data type) - gives a reference to original value
 let name = "Aishwarya"
 let anothername = "Tannu"
 anothername = "Betu"
@@ -7,6 +7,7 @@ anothername = "Betu"
 console.log(name);
 console.log(anothername);
 
+//in heap
 let userOne = {
     email : "user1@gmail.com",
     upi : "user1@upi"
