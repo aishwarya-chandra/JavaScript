@@ -1,6 +1,6 @@
 "use strict"; //treat all JS code as newer version
 
-// alert(3+3) //we are using nodejs, not browser
+// alert(3+3) //we are using nodejs, not browser , it works in browser
 
 console.log(3+3); console.log("Aishwarya") //code readability MATTERS
 
@@ -12,13 +12,13 @@ let age = 18 //number
 let flag = true //boolean
 
 // DATA TYPES(PRIMITIVE)
-// number 
+// number  - 2 to power 23
 // bigint
 // string - "" or ''
-// boolean
+// boolean - true/false
 // null - standalone value
 // undefined - not assigned value
-// symbol - unique
+// symbol - to find uniqueness
 
 console.log(typeof age);
 console.log(typeof null); // object
