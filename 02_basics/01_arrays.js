@@ -1,5 +1,6 @@
-// array
-
+//array 
+//contains non-similar type elements also
+//are resizable
 const myArr = [0, 1, 2, 3, 4, 5]
 const myHeroes = ["shaktiman", "naagraj"]
 
@@ -15,6 +16,7 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.unshift(9) //adds 9 at 0th index
 // myArr.shift() //remove element at 0th index
 
+//gives boolean type
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(3));
 
