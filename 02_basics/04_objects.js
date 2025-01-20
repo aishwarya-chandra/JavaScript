@@ -11,8 +11,8 @@ const regularUser = {
     email: "some@gmail.com",
     fullname: {
         userfullname: {
-            firstname: "hitesh",
-            lastname: "choudhary"
+            firstname: "aishwarya",
+            lastname: "chandra"
         }
     }
 }
@@ -36,12 +36,12 @@ const users = [
         email: "h@gmail.com"
     },
     {
-        id: 1,
-        email: "h@gmail.com"
+        id: 2, 
+        email: "a@gmail.com"
     },
     {
-        id: 1,
-        email: "h@gmail.com"
+        id: 3,
+        email: "p@gmail.com"
     },
 ]
 
