@@ -1,8 +1,9 @@
-const name = "Aish"
+const name = "Aish"            //denote by double or single qoute
 const repoCount = 50
 
 // console.log(name + repoCount + " Value"); //bad method
-//good method
+
+//good method - string interpolation , make placeholder ${} for variables
 // console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
 const gameName = new String('ch-aish')
@@ -22,9 +23,9 @@ const otherstr = gameName.slice(-6 , 4) //negative indexing allowed
 
 const newstr1 = "   aish    "
 // console.log(newstr1);
-// console.log(newstr1.trim());
+// console.log(newstr1.trim()); //removes spaces
 
-const url = "https://hitesh.com/hitesh%20ch"
+const url = "https://aish.com/aish%20ch"
 // console.log(url.replace('%20', '-'));
 // console.log(url.includes('ch'));
 // console.log(url.includes('chaish'));
