@@ -1,1 +1,1 @@
-# JavaScript
+# JavaScript notes for self
