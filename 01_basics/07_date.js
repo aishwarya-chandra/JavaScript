@@ -1,4 +1,5 @@
-let myDate = new Date()
+// date is an object
+ let myDate = new Date()
 // console.log(myDate);
 // console.log(myDate.toString());
 // console.log(myDate.toDateString());
@@ -23,7 +24,7 @@ let date2 = new Date("01-14-2023")
 let timeStamp = Date.now()
 // console.log(timeStamp); //value in miliseconds from 1970 to now
 // console.log(date2.getTime()); //value in miliseconds from 1970 to 1-14-23
-// console.log(Math.floor(Date.now()/1000)); 
+// console.log(Math.floor(Date.now()/1000)); //to convert in seconds
 
 let newDate = new Date()
 console.log(newDate);
