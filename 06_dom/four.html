@@ -14,7 +14,7 @@
 <script>
     //whole node tree is traversed everytime this function is called
     function addLanguage(langName){
-        const li = document.createElement('li');
+        const li = document.createElement('li'); //creates <li></li>
         li.innerHTML = `${langName}`
         document.querySelector('.language').appendChild(li)
     }
@@ -31,7 +31,7 @@
     addOptiLanguage('golang')
 
     //Edit
-    const secondLang = document.querySelector("li:nth-child(2)")
+    const secondLang = document.querySelector("li:nth-child(2)") //css ka li:nth-child
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
     const newli = document.createElement('li')
