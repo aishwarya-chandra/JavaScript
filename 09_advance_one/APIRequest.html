@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+0	UNSENT	            Client has been created. open() not called yet.
+1	OPENED	            open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING         	Downloading; responseText holds partial data.
+4	DONE	            The operation is complete.
+<div id="card" style="background-color: beige;
+                        margin: 4rem;
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        width: fit-content;">
+                        
+</div>
+
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/aishwarya-chandra'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    const Card = document.createElement("div");
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState); //tells about the state 
+        if (xhr.readyState === 4) {  //i.e,operation is complete
+            const data = JSON.parse(this.responseText) //string to object parsed
+            console.log(typeof data);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            Card.innerHTML = '<p>The pfp: {data.avatar_url}</p> <p>Followers Count: ${data.followers}</p>';
+        }
+    }
+    xhr.send(); //shows data in console
+    document.getElementById("card").appendChild(Card);
+
+</script>
+</html>
