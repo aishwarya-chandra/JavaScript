@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+        //LEXICAL SCOPING - inner functions have access to the variables of outer scopes
+
+    // function init() {                         //the outer function
+    //     let name = "Mozilla"; 
+    //     function displayName() {             //the inner function which has no local variables of its own
+    //         console.log(name);               //variable of outer function
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+
+
+        //ANOTHER EXAMPLE
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);                    //outer function does not have access to inner function local variables
+
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);                         //another inner function does not have access to variables of any other inner function
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+            //CLOSURE - A closure is the combination of a function and the lexical environment within which that function was declared.
+            // if inner function is returned, whole lexical scope, including variables of outer function will be shared
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;                       //inner function returned
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    </script>
+    <script>
+        //PRACTICAL USECASE OF CLOSURE
+
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`             //it gets color variable because of lexical scoping
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")        //function works because of closure
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
